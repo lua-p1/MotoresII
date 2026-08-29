@@ -1,11 +1,8 @@
 using UnityEngine;
 
-public class ButtonController : MonoBehaviour
+public class ButtonController : Controller
 {
-    Vector3 _moveDir;
-    public Vector3 GetMovementInput() => _moveDir;
-
-    public void NotMove() => _moveDir = Vector3.zero;
+    public override Vector3 GetMovementInput() => _moveDir;
     public void MoveFoward() => _moveDir = Vector3.forward;
     public void MoveBack() => _moveDir = Vector3.back;
     public void MoveRight() => _moveDir = Vector3.right;
